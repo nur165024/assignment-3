@@ -1,3 +1,6 @@
+// https://github.com/nur165024/assignment-3
+
+/* -------------------------------------   assignment-3 github link  --------------------------------------- */
 // kilometerToMeter
 function kilometerToMeter(kilometer){
     return kilometer * 1000;
@@ -34,7 +37,24 @@ function hotelCost(day){
     return bill;
 }
 var result = hotelCost(20);
-console.log(result);
+// console.log(result);
 /* --------------------------------------   hotelCost  ----------------------------------------- */
 
 // megaFriend
+
+function megaFriend(friend){
+    var legth = 0;
+    var longest;
+
+    for (var i = 0; i < friend.length; i++) {
+        if (friend[i].length > legth) {
+            var legth = friend[i].length;
+            longest = friend[i];
+        }
+    }
+    return longest;
+}
+var friend = ['nure alam','alam','kamal','alam','hello','hello world','my name is nure alam'];
+var result =megaFriend(friend);
+
+console.log(result);
