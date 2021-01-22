@@ -3,7 +3,11 @@
 /* -------------------------------------   assignment-3 github link  --------------------------------------- */
 // kilometerToMeter
 function kilometerToMeter(kilometer){
-    return kilometer * 1000;
+    if (kilometer > 0) {
+        return kilometer * 1000;
+    }else{
+        return 'Please Enter your Right Number ' + kilometer;
+    }
 }
 var result = kilometerToMeter(10);
 // console.log(result);
@@ -11,8 +15,13 @@ var result = kilometerToMeter(10);
 
 // budgetCalculator
 function budgetCalculator(watch,phone,loptop){
-    var total = (watch * 50) + (phone * 100) + (loptop * 500);
-    return total;
+    if ((watch > 0) && (phone > 0) && (loptop > 0)) {
+        var total = (watch * 50) + (phone * 100) + (loptop * 500);
+        return total;    
+    }else{
+        return 'Please Enter your Right Number ' + watch+','+phone+','+loptop;
+    }
+    
 }
 var result = budgetCalculator(2,2,2);
 // console.log(result);
@@ -20,24 +29,28 @@ var result = budgetCalculator(2,2,2);
 
 // hotelCost
 function hotelCost(day){
-    if(day <= 10){
-        var bill = day * 100;
-    }else if(day < 20){
-        var day10 = 10 * 100;
-        var remainDay = day - 10;
-        var secondbill = remainDay * 80;
-        bill = day10 + secondbill;
+    if (day > 0) {
+        if(day <= 10){
+            var bill = day * 100;
+        }else if(day < 20){
+            var day10 = 10 * 100;
+            var remainDay = day - 10;
+            var secondbill = remainDay * 80;
+            bill = day10 + secondbill;
+        }else{
+            day10 = 10 * 100;
+            var day19 = (19 - 10) * 80;
+            var remainDay = day - 20;
+            var third = remainDay * 50;
+            bill = day10 + day19 + third;
+        }
+        return bill;
     }else{
-        day10 = 10 * 100;
-        var day19 = (19 - 10) * 80;
-        var remainDay = day - 20;
-        var third = remainDay * 50;
-        bill = day10 + day19 + third;
+        return 'Please Enter your Right Number ' + day;
     }
-    return bill;
 }
 var result = hotelCost(20);
-// console.log(result);
+console.log(result);
 /* --------------------------------------   hotelCost  ----------------------------------------- */
 
 // megaFriend
@@ -56,5 +69,4 @@ function megaFriend(friend){
 }
 var friend = ['nure alam','alam','kamal','alam','hello','hello world','my name is nure alam'];
 var result =megaFriend(friend);
-
-console.log(result);
+// console.log(result);
