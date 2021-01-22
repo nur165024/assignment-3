@@ -50,7 +50,7 @@ function hotelCost(day){
     }
 }
 var result = hotelCost(20);
-console.log(result);
+// console.log(result);
 /* --------------------------------------   hotelCost  ----------------------------------------- */
 
 // megaFriend
